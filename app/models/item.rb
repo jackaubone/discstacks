@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
+  validates :name, presence: true
+  validates :artist, presence: true
 
   has_many :favorites
   has_many :genre_tags

@@ -1,0 +1,31 @@
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+  "name": "From Here We Go Sublime",
+  "artist": "The Field",
+  "release_date": "March 26 2007",
+  "label": "Kompakt",
+  "image_url": "https://i.discogs.com/lqBbeAtZNOx1mab1Xhc4dHxgNANVxbfV4op99qCKwF0/rs:fit/g:sm/q:90/h:542/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkzNjQy/OC0xNDIwMzUzODQx/LTc1MjcuanBlZw.jpeg",
+   "description": "Unique techno album utilizing sampling to create rich repetitive harmonious beats"
+}
+
+###
+
+POST http://localhost:3000/items/3/reviews
+Content-Type: application/json
+
+{
+  "user_id": "1",
+  "item_id": "3",
+  "rating": "7",
+  "review_body": "I like it"
+}
+
+###
+
+GET http://localhost:3000/items/3/reviews
