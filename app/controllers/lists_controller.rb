@@ -14,7 +14,7 @@ class ListsController < ApplicationController
 
   def create
     list = List.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       list_title: params[:list_title],
       list_desc: params[:list_desc],
       list_image: params[:list_image]
@@ -29,8 +29,7 @@ class ListsController < ApplicationController
 
   def update
     list = List.find_by(id: params[:id])
-
-    list.user_id = params[:user_id] || list.user_id
+    
     list.list_title = params[:list_title] || list.list_title
     list.list_desc = params[:list_desc] || list.list_desc
     list.list_image = params["list_image"] || list.list_image

@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
 
   def create
     review = Review.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       item_id: params[:item_id],
       rating: params[:rating],
       review_body: params[:review_body]
@@ -29,8 +29,7 @@ class ReviewsController < ApplicationController
 
   def update 
     review = Review.find_by(id: params[:id])
-
-    review.user_id = params[:user_id] || review.user_id
+    
     review.item_id = params[:item_id] || review.item_id
     review.rating = params[:rating] || review.rating
     review.review_body = params[:review_body] || review.review_body

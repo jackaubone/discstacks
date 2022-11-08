@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 
   resources :genres
 
+  post "/sessions" => "sessions#create"
+
 
 end

@@ -1,3 +1,6 @@
+#JWT for user3: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgxMDYyMjJ9.6QGPvhtVkI6jGBwJO1cOtL-ISmgjX8-_g5DXL6NYXYk
+
+
 GET http://localhost:3000/
 
 ###
@@ -29,3 +32,25 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/items/3/reviews
+
+### LOGIN
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### Signup
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "John",
+  "email": "test1@test.com",
+  "password": "password"
+}
+
+### Users index
+GET http://localhost:3000/users
