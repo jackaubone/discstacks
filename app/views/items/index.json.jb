@@ -8,7 +8,6 @@
     image_url: item.image_url,
     description: item.description,
 
-    favorites: item.favorites,
     genre_tags: item.genre_tags,
     genres: item.genres,
     reviews: item.reviews,

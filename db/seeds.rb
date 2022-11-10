@@ -60,11 +60,6 @@ ListItem.create(
   item_id: 1
 )
 
-Favorite.create(
-  user_id: 2,
-  item_id: 1
-)
-
 Genre.create(
   name: "UK Dub"
 )

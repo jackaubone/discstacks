@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root "items#index"
 
   resources :users do
-    resources :favorites
     resources :lists 
   end 
 
