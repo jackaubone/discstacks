@@ -7,10 +7,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :favorites
+    resources :lists 
   end 
-
-  resources :lists 
-  resources :list_items
 
   resources :items do
     resources :reviews

@@ -1,14 +1,18 @@
 class ItemsController < ApplicationController
+  #before_action :authenticate_user
+  
   def index
-    item = Item.all
+    @items = Item.all
 
-    render json: item.as_json
+    #render json: @items.as_json
+    render template: "items/index"
   end
 
   def show
-    item = Item.find_by(id: params[:id])
+    @item = Item.find_by(id: params[:id])
 
-    render json: item.as_json
+    #render json: @item.as_json
+    render template: "items/show"
   end
 
   def create

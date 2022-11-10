@@ -1,4 +1,4 @@
-#JWT for user3: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgxMDYyMjJ9.6QGPvhtVkI6jGBwJO1cOtL-ISmgjX8-_g5DXL6NYXYk
+@jwt_user= eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgxODg4NzN9.Oh2P4UOhK7figlveIFl6dmBQifjplCFPpQ7lgNEjYm4
 
 
 GET http://localhost:3000/
@@ -36,9 +36,10 @@ GET http://localhost:3000/items/3/reviews
 ### LOGIN
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
+Authorization: Bearer {{jwt_user}}
 
 {
-  "email": "test@test.com",
+  "email": "test1@test.com",
   "password": "password"
 }
 
@@ -54,3 +55,4 @@ Content-Type: application/json
 
 ### Users index
 GET http://localhost:3000/users
+Authorization: Bearer {{jwt_user}}

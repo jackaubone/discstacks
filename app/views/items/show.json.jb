@@ -1,0 +1,17 @@
+{
+  id: @item.id,
+  name: @item.name,
+  artist: @item.artist,
+  release_date: @item.release_date,
+  label: @item.label,
+  image_url: @item.image_url,
+  description: @item.description,
+
+  favorites: @item.favorites,
+  genre_tags: @item.genre_tags,
+  genres: @item.genres,
+  reviews: @item.reviews,
+  review_count: @item.review_count,
+  list_items: @item.list_items
+
+}

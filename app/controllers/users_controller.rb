@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  #before_action :authenticate_user
+
   def create
     user = User.new(
       name: params[:name],
@@ -16,15 +18,21 @@ class UsersController < ApplicationController
   end
 
   def index
-    user = User.all
+    @users = User.all
 
-    render json: user.as_json
+    #render json: @users.as_json
+    render template: "users/index"
   end
 
   def show
-  user = User.find_by(id: params[:id])
-
-  render json: user.as_json
+ 
+    @user = User.find_by(id: params[:id])
+    if current_user == @user
+      #render json: @user.as_json
+      render template: "users/show"
+    else
+      render json: {errors: @user.errors.full_messages }, status: :unauthorized
+    end
   end
 
 end
