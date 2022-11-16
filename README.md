@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# DISCSTACK Backend
 
-* Ruby version
+Discstack is a web app for organizing and saving your favorite albums
 
-* System dependencies
+### [DISCSTACK Frontend](https://github.com/jackaubone/discstacks.git)
 
-* Configuration
+## Installation
 
-* Database creation
+Use Rails for installation and clone with github
 
-* Database initialization
+```bash
+rails db:create 
+rails db:seed 
+rails db:migrate
+rails server
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-* ...
+Please make sure to update tests as appropriate.
+
