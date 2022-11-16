@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "items#index"
 
-  resources :users do
-    resources :lists 
-  end 
+  resources :users 
+  resources :lists
+  
+  post "/list_items" => "list_items#create"
+  delete "/list_items" => "list_items#destroy"
 
   resources :items do
     resources :reviews

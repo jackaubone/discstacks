@@ -5,5 +5,5 @@
   image_url: @user.image_url,
   
   reviews: @user.reviews,
-  lists: @user.lists
+  lists: @user.lists,
 }

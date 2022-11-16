@@ -3,15 +3,15 @@ class ListsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    list = List.all
+    @lists = List.all
 
-    render json: list.as_json
+    render template: "lists/index"
   end
 
   def show
-    list = List.find_by(id: params[:id])
+    @list = List.find_by(id: params[:id])
 
-    render json: list.as_json
+    render template: "lists/show"
   end
 
   def create
@@ -37,7 +37,7 @@ class ListsController < ApplicationController
     list.list_image = params["list_image"] || list.list_image
 
     if list.save
-      render json: {message: "List updated"}, status: :updated
+      render json: {message: "List updated"}
     else
       render json: {errors: list.errors.full_messages}, status: :bad_request
     end

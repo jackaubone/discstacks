@@ -1,0 +1,14 @@
+@lists.map do |list|
+  {
+    id: list.id,
+    user_id: list.user_id,
+    list_title: list.list_title,
+    list_desc: list.list_desc,
+    list_image: list.list_image,
+
+    list_items: list.list_items,
+    items: list.items,
+
+    author: list.list_author
+  }
+end
