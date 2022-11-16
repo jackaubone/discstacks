@@ -4,7 +4,7 @@
 
 Discstack is a web app for organizing and saving your favorite albums
 
-### [DISCSTACK Frontend](https://github.com/jackaubone/discstacks.git)
+### [DISCSTACK Frontend](https://github.com/jackaubone/discstack_frontend.git)
 
 ## Installation
 
